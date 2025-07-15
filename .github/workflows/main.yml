@@ -1,6 +1,6 @@
 name: BlaBla
 #глобальные хуйни
-env:
+env: #инвайромент вэльюбалс
   APPLICATION_NAME: "My proj"
   DEPLOY_PACKAGE_NAME: "proj-deploy-ver${{github.sha}}" #токен коммита
 on:
@@ -29,9 +29,24 @@ jobs:
   my_deploy:
     runs-on: ubuntu-latest
     needs: [my-testing] # данный джоб начнется после выполнения my-testing
+    env: #джоб вэльюбалс
+      Var1: "Job level variable 1"
+      VAr2: "Job level variable 2" 
     steps:
       - name: Print Hello World Message
         run: echo "hello world"
+      - name: job vars
+        run: |
+            echo "Var1 = ${{env.Var1}}"
+            echo "Var2 = ${{env.VAr2}}"
+            echo "Var3 = $Local_Var"
+  env: #джоб вэльюбалс локал в степе
+      Local_Var: "Job local variable"
+       
       - name: Printing packages
         run: |
               echo "Package name ${{env.APPLICATION_NAME}}"
+
+      - name: test packages
+        run: aws --version # показывает работоспособность aws и его верси.
+
