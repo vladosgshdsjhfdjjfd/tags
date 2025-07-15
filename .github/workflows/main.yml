@@ -39,8 +39,8 @@ jobs:
             echo "Var1 = ${{env.Var1}}"
             echo "Var2 = ${{env.VAr2}}"
             echo "Var3 = $Local_Var"
-  env: #джоб вэльюбалс локал в степе
-      Local_Var: "Job local variable"
+        env: #джоб вэльюбалс локал в степе
+            Local_Var: "Job local variable"
        
       - name: Printing packages
         run: |
