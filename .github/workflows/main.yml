@@ -1,5 +1,5 @@
 name: BlaBla
-env: #глобальные инвайромент вэльюбалс
+env: #глобальные инвайромент вэльюбалс хе хе
   APPLICATION_NAME: "My proj"
   DEPLOY_PACKAGE_NAME: "proj-deploy-ver${{github.sha}}" #токен коммита
 on:
