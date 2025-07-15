@@ -1,2 +1,2 @@
 Status of Last Deployment:<br>
-![Status](https://github.com/username/repo/workflows/BlaBla/badge.svg?branch=main)
+<img src="https://github.com/vladosgshdsjhfdjjfd/tags/workflows/main.yml/badge.svg?branch=master"><br>
